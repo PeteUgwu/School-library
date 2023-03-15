@@ -99,14 +99,6 @@ To run tests, run the following command:
  ruby -I test
 ```
 
-### Deployment
-
-You can deploy this project using:
-
-```
-
-```
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
