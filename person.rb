@@ -1,4 +1,4 @@
-require "./nameable"
+require './nameable'
 
 class Person < Nameable
   def initialize(age, name = 'Unknown', parent_permission: true)
@@ -6,6 +6,7 @@ class Person < Nameable
     @age = age
     @name = name
     @parent_permission = parent_permission
+    super()
   end
 
   def correct_name
