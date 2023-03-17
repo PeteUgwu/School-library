@@ -5,7 +5,7 @@ def welcome
 end
 
 def create_person(library)
-  print 'Do you want to create a Student (1) or a teacher (2)?:'
+  print 'Do you want to create a Student (1) or a teacher (2)? [Input the number]:'
 
   input = gets.chomp.to_i
 
@@ -21,7 +21,7 @@ def create_person(library)
 
     library.create_student(age, name, permission == 'y')
   else
-    print 'Enter Teachers specialization:'
+    print 'Specialization:'
     spec = gets.chomp
 
     library.create_teacher(age, name, spec)
@@ -39,17 +39,17 @@ def create_book(library)
   author = gets.chomp
   library.add_book(title, author)
 
-  puts 'Book created'
+  puts 'Book created successfully!'
   user_choice(library)
 end
 
 def create_rental(library)
-  puts 'Select a Books from the book list below: '
+  puts 'Select a book from the book list below by number: '
   library.list_books
 
   book_id = gets.chomp.to_i
 
-  puts "Select a person from the list below: Enter the person's ID: "
+  puts "Select a person from the following list by number (not ID): "
   library.list_people
 
   person_id = gets.chomp.to_i
@@ -59,7 +59,7 @@ def create_rental(library)
 
   library.create_rental(book_id - 1, person_id, date)
 
-  puts 'Rental created Suceefully!!'
+  puts 'Rental created Successfully!'
   user_choice(library)
 end
 
