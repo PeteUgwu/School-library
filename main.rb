@@ -49,7 +49,7 @@ def create_rental(library)
 
   book_id = gets.chomp.to_i
 
-  puts "Select a person from the following list by number (not ID): "
+  puts 'Select a person from the following list by number (not ID): '
   library.list_people
 
   person_id = gets.chomp.to_i
